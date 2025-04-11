@@ -18,12 +18,14 @@ import PageNotFound from "../pages/PageNotFound";
 import { DropDownProvider } from "../context/DropDownContext";
 
 function App() {
-  const {setShowCategory, setShowInsurance} = useContext(DropDownProvider)
+  // const {setShowCategory, setShowInsurance} = useContext(DropDownProvider)
    return (
-    <div onMouseLeave={() => {
-      setShowCategory(false);
-      setShowInsurance(false);
-    }}>
+    <div
+    // onMouseEnter={() => {
+    //   setShowCategory(false);
+    //   setShowInsurance(false);
+    // }}
+    >
       <Header/>
     <Routes>
       <Route path="/" element={<Home />} />

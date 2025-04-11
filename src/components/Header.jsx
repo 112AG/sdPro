@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/vite.svg";
 import { DropDownProvider } from "../context/DropDownContext";
@@ -33,6 +33,22 @@ function Header() {
     "General Insurance",
   ];
 
+  // Add a useEffect to handle mouse leave for dropdowns
+  useEffect(() => {
+    const handleMouseLeave = () => {
+      setShowCategory(false);
+      setShowInsurance(false);
+    };
+
+    // Attach mouse leave event to the header
+    const headerElement = document.querySelector("header");
+    headerElement.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      headerElement.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [setShowCategory, setShowInsurance]);
+
   return (
     <header className="bg-white shadow-md relative z-50">
  
@@ -64,13 +80,16 @@ function Header() {
             className="relative"
             onMouseEnter={() => {
               setShowCategory(true);
-             }}
+            }}
+            onMouseLeave={() => {
+              setShowCategory(false);
+            }}
           >
             <Link to="/category" className="cursor-pointer hover:text-blue-600">
               Category <i className="ri-arrow-drop-down-fill"></i>
             </Link>
             {showCategory && (
-              <div className="absolute left-0 top-full mt-2 bg-white rounded shadow-md px-2 py-2 text-sm w-48">
+              <div className="absolute left-0 top-[54%] mt-2 bg-white rounded shadow-md px-2 py-2 text-sm w-48">
                 <ul>
                   {categoryItems.map((loan, index) => (
                     <li
@@ -89,8 +108,11 @@ function Header() {
           <div
             className="relative"
             onMouseEnter={() => {
-                setShowInsurance(true);
-               }}
+              setShowInsurance(true);
+            }}
+            onMouseLeave={() => {
+              setShowInsurance(false);
+            }}
           >
             <Link
               to="/insurance"
@@ -99,7 +121,7 @@ function Header() {
               Insurance <i className="ri-arrow-drop-down-fill"></i>
             </Link>
             {showInsurance && (
-              <div className="absolute right-0 top-full mt-2 bg-white rounded shadow-md px-2 py-2 text-sm w-[164px]">
+              <div className="absolute right-0 top-[54%] mt-2 bg-white rounded shadow-md px-2 py-2 text-sm w-[164px]">
                 <ul>
                   {insuranceItems.map((item, index) => (
                     <li
