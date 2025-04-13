@@ -1,8 +1,9 @@
 import React from 'react'
+import Working from '../components/Working'
 
 function MediaCoverage() {
   return (
-    <div>MediaCoverage</div>
+    <Working />
   )
 }
 

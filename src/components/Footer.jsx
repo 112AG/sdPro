@@ -13,14 +13,16 @@ const Footer = () => {
           </div>
           <div className="text-sm space-y-2">
             <p>
-              <span className="font-semibold">Address:</span> 123 Main Street,
-              City, Country
+              <span className="font-semibold">Address:</span> C-168/169, Emerald
+              One, B/s, Gujarat Kidney Hospital, Jetalpur Road, Vadodara,
+              Gujarat, India
             </p>
             <p>
-              <span className="font-semibold">Mobile:</span> (123) 456-7890
+              <span className="font-semibold">Mobile:</span> +91 9106531465
             </p>
             <p>
-              <span className="font-semibold">Email:</span> contact@example.com
+              <span className="font-semibold">Email:</span>{" "}
+              sdfinancialofficial@gmail.com
             </p>
           </div>
 
@@ -28,14 +30,14 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
             <div className="flex space-x-4">
               {/* Replace "#" with your actual social media links */}
-              <Link className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
+              <Link to='https://www.facebook.com/Sdfinancialservices.fb' className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
                 <i className="ri-facebook-line"></i>
               </Link>
-              <Link className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
+              <Link to='https://www.instagram.com/sdfinance.in/' className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
                 <i className="ri-instagram-line"></i>
               </Link>
-              <Link className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
-                <i className="ri-twitter-line"></i>
+              <Link to='https://www.linkedin.com/company/sdfinancialservices' className="h-8 w-8 bg-white rounded-full text-blue-600 flex items-center justify-center font-semibold hover:shadow-md transition">
+                <i className="ri-linkedin-line"></i>
               </Link>
             </div>
           </div>
@@ -83,7 +85,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/blog" className="hover:text-blue-100 transition-colors">
+              <Link
+                to="/blog"
+                className="hover:text-blue-100 transition-colors"
+              >
                 Blog
               </Link>
             </li>
@@ -142,7 +147,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/home-loan" className="hover:text-blue-100 transition-colors">
+              <Link
+                to="/home-loan"
+                className="hover:text-blue-100 transition-colors"
+              >
                 Home Loan
               </Link>
             </li>
@@ -237,7 +245,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to='/query'
+                to="/query"
                 className="hover:text-blue-100 transition-colors"
               >
                 Query
