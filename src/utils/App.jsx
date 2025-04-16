@@ -20,7 +20,7 @@ import { DropDownProvider } from "../context/DropDownContext";
 function App() {
   // const {setShowCategory, setShowInsurance} = useContext(DropDownProvider)
    return (
-    <div
+    <div 
     // onMouseEnter={() => {
     //   setShowCategory(false);
     //   setShowInsurance(false);
