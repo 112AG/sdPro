@@ -6,25 +6,25 @@ import SDMan from "../../assets/homeAssets/SDMan.png";
 function Home() {
   return (
     <div className="h-full w-full">
-      <div className="h-[90vh] w-full bg-[#013775] px-4 flex justify-around">
+      <div className="h-[90vh] w-full bg-[#013775] px-4 flex sm:flex-row flex-col-reverse justify-around">
         {/* Left block: Overlapping images */}
-        <div className="w-[40%] relative">
+        <div className="w-[100%] sm:w-[40%] relative flex items-center justify-center">
           {/* Decorative shape/rectangle */}
           <img
             src={Decoration}
             alt="linearRectangle"
-            className="absolute bottom-0 h-[250px] sm:h-[300px] md:h-[350px] lg:h-[434px] 2xl:h-[589px]"
+            className="sm:absolute bottom-0 h-[330px] sm:h-[300px] md:h-[350px] lg:h-[434px] 2xl:h-[589px]"
           />
           {/* SDMan image */}
           <img
             src={SDMan}
             alt="Our Employee"
-            className="absolute bottom-0 h-[282px] sm:h-[340px] md:h-[394px] lg:h-[494px] 2xl:h-[669px]"
+            className="absolute bottom-0 h-[382px] sm:h-[340px] md:h-[394px] lg:h-[494px] 2xl:h-[669px]"
           />
         </div>
 
         {/* Right block: Text + button + clients label */}
-        <div className="w-[40%] h-full flex flex-col items-start justify-center ">
+        <div className="w-[100%] sm:w-[40%] sm:h-full flex flex-col items-start justify-center ">
           <p className="text-[#1AD079] text-sm sm:text-base md:text-lg font-medium">
             Welcome to SD Financial Services
           </p>
