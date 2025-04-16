@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Routes, Route } from "react-router";
-import Home from "../pages/Home";
+import Home from "../pages/home/Home";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import About from "../pages/About";
