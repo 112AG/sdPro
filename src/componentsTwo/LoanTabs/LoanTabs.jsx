@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { data } from "../../data/data";
 import Button from "../../components/Button";
 import "./loanTabs.css";
+import ActiveSVG from "../../../public/ActiveButtonBg.svg";
 
 function LoanTabs() {
   const [getOption, setGetOption] = useState({ data: "", idx: "" });
@@ -20,7 +21,27 @@ function LoanTabs() {
   return (
     <div className="w-full h-full ">
       <div className="animate-fade mx-auto max-w-6xl">
-        <div className="flex items-center justify-center flex-wrap gap-3 animate-fade">
+        {/* <div className="flex items-center justify-center flex-wrap gap-3">
+          {loanProducts.map((data, idx) => (
+            <div
+              onClick={() => handleOption(data, idx)}
+              className={`py-[12px] px-6 border-2 ${
+                getOption.idx === ""
+                  ? idx === 0
+                    ? "border-[#1bd07a] "
+                    : "border-white"
+                  : getOption.idx === idx
+                  ? "border-[#1bd07a] "
+                  : "border-white"
+              } bg-[#f6f8fb] rounded-xl font-semibold`}
+              key={idx}
+            >
+              {data.title}
+            </div>
+          ))}
+        </div> */}
+        
+        <div className="flex items-center justify-center flex-wrap gap-3">
           {loanProducts.map((data, idx) => (
             <div
               onClick={() => handleOption(data, idx)}
@@ -41,7 +62,10 @@ function LoanTabs() {
         </div>
 
         {selected ? (
-          <div className=" flex justify-around gap-2 px-4 sm:px-6 py-14">
+          <div
+            key={selected.title}
+            className="flex justify-around gap-2 px-4 sm:px-6 py-14 animate-fade"
+          >
             <div
               className="max-w-[539px] bg-white rounded-[34px] py-6 px-[4vw] min-h-[354px]"
               style={{ boxShadow: "0px 4px 65px rgba(0, 0, 0, 0.02)" }}
@@ -73,7 +97,10 @@ function LoanTabs() {
             </div>
           </div>
         ) : (
-          <div className="flex justify-around px-4 sm:px-6 py-14">
+          <div
+            key={loanProducts.title}
+            className="flex justify-around px-4 sm:px-6 py-14 animate-fade"
+          >
             <div
               className="max-w-[539px] bg-white rounded-[34px] py-6 px-[4vw] min-h-[354px]"
               style={{ boxShadow: "0px 4px 65px rgba(0, 0, 0, 0.02)" }}

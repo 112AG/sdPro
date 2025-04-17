@@ -2,16 +2,18 @@ import React from "react";
 import "./home.css";
 import Decoration from "../../assets/homeAssets/Decoration.png";
 import SDMan from "../../assets/homeAssets/SDMan.png";
-import clientOne from '../../assets/homeAssets/client1.jpg'
-import clientTwo from '../../assets/homeAssets/client2.jpg'
-import clientThree from '../../assets/homeAssets/client3.jpg'
+import clientOne from "../../assets/homeAssets/client1.jpg";
+import clientTwo from "../../assets/homeAssets/client2.jpg";
+import clientThree from "../../assets/homeAssets/client3.jpg";
 import TopHeader from "../../components/TopHeader";
 import LoanTabs from "../../componentsTwo/LoanTabs/LoanTabs";
 import Button from "../../components/Button";
+import WhyUs from "../../componentsTwo/WhyUS/WhyUs";
 
 function Home() {
   return (
     <div className="h-full w-full bg-[#f6f8fb]">
+      {/* One */}
       <div className="h-screen w-full bg-[#013775] px-4 flex sm:flex-row flex-col-reverse justify-around">
         {/* Left block: Overlapping images */}
         <div className="w-[100%] h-full sm:w-[40%] relative flex items-center justify-center">
@@ -49,7 +51,7 @@ function Home() {
 
           {/* Button and "Happy Clients" row */}
           <div className="flex items-center gap-5 pt-4">
-            <Button btn='Contact Us' link='#'/>
+            <Button btn="Contact Us" link="#" />
 
             <div className="flex items-center justify-start gap-[-20px]">
               <div className="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] rounded-full border-[2px] border-[#001f3f] overflow-hidden z-10">
@@ -84,15 +86,18 @@ function Home() {
           </div>
         </div>
       </div>
-
+      {/* Two */}
       <div className="h-full w-full">
-        <TopHeader top={'Who we are'} subHead='Our Main Service'/>
-
-        <LoanTabs/>        
+        <TopHeader top={"Who we are"} subHead="Our Main Service" />
+        <LoanTabs />
       </div>
+      {/* Three */}
+      <div>
+        <TopHeader top={"Why us"} subHead="Why SD Financs?" />
 
-      <div></div>
-
+        <WhyUs/>
+      </div>
+      {/* Four */}
       <div></div>
 
       <div></div>
