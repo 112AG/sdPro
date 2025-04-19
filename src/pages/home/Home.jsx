@@ -9,8 +9,17 @@ import TopHeader from "../../components/TopHeader";
 import LoanTabs from "../../componentsTwo/LoanTabs/LoanTabs";
 import Button from "../../components/Button";
 import WhyUs from "../../componentsTwo/WhyUS/WhyUs";
+import Award from "../../assets/homeAssets/Award.png";
+import HowItWorks from '../../assets/homeAssets/HowItWorks.png'
 
 function Home() {
+  const awards = [
+    { title: 'Best Loan', subtitle: 'Provider' },
+    { title: 'Best Third Party', subtitle: 'finance Provider' },
+    { title: 'Best Loan', subtitle: 'Provider' },
+    { title: 'Best Third Party', subtitle: 'Provider' },
+  ];
+  
   return (
     <div className="h-full w-full bg-[#f6f8fb]">
       {/* One */}
@@ -98,9 +107,42 @@ function Home() {
         <WhyUs/>
       </div>
       {/* Four */}
-      <div></div>
+      <div>
+      <TopHeader top={"Achievements"} subHead="Our Achievements & Certificates" />
+      <p className="text-center py-2 text-[17px] pb-10">Recognized for excellence, innovation, and trusted financial solutions.</p>
 
-      <div></div>
+      <section className="bg-[#003c71] py-10 px-4 flex flex-wrap justify-center gap-10">
+      {awards.map((award, index) => (
+        <div key={index} className="text-center w-[148px] text-white flex flex-col items-center">
+          <img src={Award} alt="Awards" className="h-[112px] mb-2" />
+          <div className="font-semibold text-[18px] leading-tight">
+            {award.title}<br />{award.subtitle}
+          </div>
+        </div>
+      ))}
+    </section>
+
+      </div>
+
+      <div>
+      <TopHeader top={"Process"} subHead="How it works" />
+
+      
+      <div className="max-w-4xl mx-auto bg-fuchsia-300 py-10">
+        <div
+              className="max-w-[339px] bg-white rounded-[34px] min-h-[354px] overflow-hidden"
+              style={{ boxShadow: "0px 4px 65px rgba(0, 0, 0, 0.02)" }}
+            >
+              <img
+                src={HowItWorks}
+                className="w-full h-full object-"
+                alt='Works'
+              />
+            </div>
+        <div></div>
+      </div>
+
+      </div>
 
       <div></div>
 
